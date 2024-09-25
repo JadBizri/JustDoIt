@@ -1,5 +1,7 @@
 import React from 'react';
-import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native';
+import { Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+
+import colors from '../config/colors';
 
 function WelcomeScreen(props) {
     return (
@@ -9,8 +11,16 @@ function WelcomeScreen(props) {
                 <Text style={styles.text}>Sell What You Don't Need</Text>
             </View>
 
-            <View style={ styles.loginButton }></View>
-            <View style={ styles.registerButton }></View>
+            <TouchableOpacity activeOpacity={0.5} style={ styles.loginButton }>
+                <View>
+                    <Text style={styles.text}>Login</Text>
+                </View>
+            </TouchableOpacity>
+            <TouchableOpacity activeOpacity={0.5} style={ styles.registerButton }>
+                <View>
+                    <Text style={styles.text}>Register</Text>
+                </View>
+            </TouchableOpacity>
         </ImageBackground>
     );
 }
@@ -24,8 +34,10 @@ const styles = StyleSheet.create({
     loginButton: {
         width: '100%',
         height: 120,
-        backgroundColor: '#4baaff',
+        backgroundColor: colors.primary,
         borderWidth: 2,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     logo: {
         width: 200,
@@ -35,16 +47,24 @@ const styles = StyleSheet.create({
     },
     logoContainer: {
         position: 'absolute',
-        top: 100,
+        top: 200,
         alignItems: 'center',
     },
     registerButton: {
         width: '100%',
         height: 120,
-        backgroundColor: '#fd64b3',
+        backgroundColor: colors.secondary,
         borderWidth: 2,
         borderTopWidth: 0,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
+    text: {
+        color: colors.black,
+        fontSize: 20,
+        fontWeight: 'bold',
+        paddingVertical: 20
+    }
 });
 
 export default WelcomeScreen;
