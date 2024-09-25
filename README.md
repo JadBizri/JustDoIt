@@ -4,4 +4,4 @@ The purpose of this project was to help me learn how to use React Native and bui
 
 Ended up creating the following welcome page:
 
-<!-- ![alt text](https://github.com/JadBizri/JustDoIt/app/main/image.jpg?raw=true) -->
+![alt text](https://github.com/JadBizri/JustDoIt/blob/main/app/assets/ss.PNG)
